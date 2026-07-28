@@ -74,13 +74,44 @@ Portfolio "app farms" spraying many thin listings underperform. Nothing here say
 
 **Correction 2: "competing with giants" was an overclaim.** It is true in *specific* categories — Shopify Flow owns 69% of workflow-automation — but not generally. The highest-traction apps in a random sample are overwhelmingly small independent shops (Rose Perl Technology, Prezen Apps, Trackify X, Navidium Apps). Microsoft's own channel app manages a 3.2 rating and 323 reviews. Pick the category carefully and the incumbent is usually beatable; the hard part remains being found at all.
 
+## The decisive finding: vintage, not niche (2026-07-27)
+
+The 7.5% figure above is **vintage-biased** and should not be used. It pools apps launched when the store was nearly empty with apps launched into today's flood. Controlling for launch date changes the answer:
+
+| launch cohort | got any review | cleared 50 reviews |
+|---|---|---|
+| 2023 | 59.2% | **8.5%** |
+| 2024 | 44.3% | **4.5%** |
+| 2025 | 38.0% | **0.7%** |
+
+Age-adjusted traction (reviews per month since launch) has a median of **0.00 for every cohort since 2024**, versus 0.47 for 2015. This is not an artifact of young apps — it is per-month.
+
+The mechanism is visible in the listing population itself:
+
+| launched | share of everything currently listed |
+|---|---|
+| 2024 | 12.9% |
+| 2025 | 20.0% |
+| **2026 (partial year)** | **35.4%** |
+
+**68% of every app on the store launched in 2024 or later.** The store is being flooded, and the flood is accelerating.
+
+### Why this matters more than any niche selection
+
+The reason building felt like the right move is that building got cheap. But it got cheap *for everyone* — the same tooling that lets one person ship an app in days is being used by thousands of others, and the store is the result. **Our build speed is not an advantage; it is the new baseline, and it is the direct cause of the saturation.**
+
+Levers that operate *inside* the store are marginal against this. The Built for Shopify badge is the strongest in-store signal measured, and it moves the share of apps earning >1 review/month from 5.0% to 9.0% — real, worth having, and confounded (better developers earn badges). It does not rescue a 0.7% cohort base rate.
+
+**A realistic prior for a new app launched today, with no outside distribution, is on the order of 1% — not 7.5%.**
+
 ## Honest limitations
 
 - **Review count is a proxy for installs, not a headcount.** Shopify does not publish install numbers. Only a small and non-uniform fraction of merchants review. Treat it as a *ranking* signal.
 - **A sample, not a census.** 700 of ~24k listings characterises category-level supply; it will miss small categories.
 - **Weak incumbents ≠ easy market.** Sometimes everything in a category is badly rated because the problem is genuinely hard, or because merchants blame the app for Shopify's own constraints. The review mining is what separates "nobody built it well" from "it can't be built well."
 - This measures *opportunity*, not *execution*. It tells you where to aim, not whether you'll hit.
-- **Two corrections worth recording.** The first ranking sampled 2.8% of listings and treated sample counts as real supply — it reported "5 apps" for a category with 136, and "8" for one with 360. It also reported mean ratings of 3.83–3.93 for categories whose true means are 4.53–4.64. Both were sampling artifacts; the census exists because of them. Sample rates are not census counts.
+- **Survivorship.** These are listings that still exist. Apps that were pulled are invisible, so every estimate here is optimistic.
+- **Three corrections worth recording.** The 7.5% base rate was vintage-biased (see above) and is superseded by the cohort table. The first ranking sampled 2.8% of listings and treated sample counts as real supply — it reported "5 apps" for a category with 136, and "8" for one with 360. It also reported mean ratings of 3.83–3.93 for categories whose true means are 4.53–4.64. Both were sampling artifacts; the census exists because of them. Sample rates are not census counts.
 
 ## Etiquette
 
