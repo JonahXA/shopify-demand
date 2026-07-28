@@ -49,7 +49,8 @@ def known_categories() -> list[str]:
 
 def snapshot_category(slug: str, max_pages: int = 4) -> list[dict]:
     """One dated observation per app, with its rank in the listing."""
-    today = dt.date.today().isoformat()
+    today = dt.datetime.now(dt.timezone.utc).date().isoformat()
+    captured_at = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
     rows: list[dict] = []
     rank = 0
     listed_total = None
@@ -70,7 +71,8 @@ def snapshot_category(slug: str, max_pages: int = 4) -> list[dict]:
         for c in cards:
             rank += 1
             rows.append({
-                "date": today, "category": slug, "rank": rank,
+                "date": today, "captured_at": captured_at,
+                "category": slug, "rank": rank,
                 "listed_total": listed_total, **c,
             })
     return rows
