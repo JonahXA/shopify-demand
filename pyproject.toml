@@ -7,7 +7,7 @@ name = "shopdemand"
 version = "0.1.0"
 description = "Demand research on the Shopify App Store: find niches with real spend and weak incumbents"
 requires-python = ">=3.10"
-dependencies = ["requests", "pandas"]
+dependencies = ["requests", "pandas", "pyarrow"]  # pyarrow: parquet engine, required by the archive
 
 [tool.setuptools.packages.find]
 where = ["src"]
