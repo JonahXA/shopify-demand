@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>App Store Radar — what's actually growing on the Shopify App Store</title>
+<meta name="description" content="Daily ranking, rating and review-velocity tracking across the Shopify App Store. The history nobody else has, because it cannot be backfilled." />
+<style>
+  :root{
+    color-scheme: dark;
+    --bg:#0d0f12; --surface:#15181d; --line:#242932;
+    --ink:#f2f4f7; --ink2:#a8b0bd; --muted:#6b7482;
+    --accent:#4c9aff; --good:#2fbf71; --warn:#e8a33d; --bad:#e5484d;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--ink);
+       font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  main{max-width:1080px;margin:0 auto;padding:48px 22px 96px}
+  .eyebrow{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+           color:var(--accent);font-weight:600}
+  h1{font-size:2.4rem;letter-spacing:-.025em;margin:12px 0 14px;line-height:1.1}
+  .lede{color:var(--ink2);max-width:660px;font-size:1.05rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:34px 0}
+  .tile{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .tile .v{font-size:1.85rem;font-weight:650;letter-spacing:-.02em}
+  .tile .l{color:var(--muted);font-size:.8rem;margin-top:3px}
+  section{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+          padding:26px;margin:22px 0}
+  h2{font-size:1.08rem;font-weight:640;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:.86rem;margin:5px 0 18px;max-width:70ch}
+  .scroll{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:.87rem;white-space:nowrap}
+  th{text-align:left;color:var(--muted);font-weight:500;font-size:.76rem;
+     text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;border-bottom:1px solid var(--line)}
+  td{padding:9px 10px;border-bottom:1px solid #1c2027;font-variant-numeric:tabular-nums}
+  td.name{white-space:normal;max-width:280px}
+  tr:hover td{background:#191d24}
+  .pill{display:inline-block;font-size:.72rem;padding:2px 9px;border-radius:99px;
+        border:1px solid currentColor}
+  .pill.warn{color:var(--warn)} .pill.good{color:var(--good)} .pill.bad{color:var(--bad)}
+  .note{border-left:2px solid var(--accent);padding:12px 0 12px 16px;color:var(--ink2);
+        font-size:.9rem;margin:18px 0;background:#12161c}
+  ul.pts{list-style:none;padding:0;display:grid;gap:11px}
+  ul.pts li{position:relative;padding-left:20px;color:var(--ink2);font-size:.93rem}
+  ul.pts li:before{content:"";position:absolute;left:2px;top:.6em;width:7px;height:7px;
+                   border-radius:2px;background:var(--accent)}
+  ul.pts strong{color:var(--ink)}
+  footer{color:var(--muted);font-size:.8rem;margin-top:44px;line-height:1.7}
+  a{color:var(--accent)}
+  @media(max-width:640px){h1{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">App Store Radar</div>
+  <h1>What's actually growing on the Shopify App&nbsp;Store</h1>
+  <p class="lede">
+    Shopify shows you an app's rating and review count <em>today</em>. It keeps no history of
+    either. So nobody can tell you which apps are accelerating, which are dying, or how fast a
+    category is filling up — because that data has never existed anywhere.
+    <strong>We started recording it.</strong>
+  </p>
+
+  <div class="grid" id="tiles"></div>
+
+  <section>
+    <h2>The catalogue is a graveyard. The visible market isn't.</h2>
+    <p class="sub">
+      These two numbers describe the same store and look nothing alike — which is the whole point.
+    </p>
+    <div class="scroll"><table id="traction"></table></div>
+    <div class="note" id="tractionNote"></div>
+  </section>
+
+  <section id="velocitySection">
+    <h2>Movement</h2>
+    <p class="sub" id="velocitySub"></p>
+    <div class="scroll"><table id="movers"></table></div>
+  </section>
+
+  <section>
+    <h2>Category structure</h2>
+    <p class="sub">
+      How crowded each category is, how well the incumbents are rated, and how much of the
+      category's total review volume the leader takes.
+    </p>
+    <div class="scroll"><table id="cats"></table></div>
+  </section>
+
+  <section>
+    <h2>Why this can't be copied</h2>
+    <ul class="pts">
+      <li><strong>The input is elapsed time.</strong> A competitor starting six months from now
+        starts six months behind and never catches up. No amount of funding or AI compresses that.</li>
+      <li><strong>Shopify publishes no history.</strong> Rank, rating and review count are
+        available only as of right now. Yesterday is gone the moment it passes.</li>
+      <li><strong>Every day widens the gap.</strong> The archive appends automatically and costs
+        nothing to hold.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div id="meta"></div>
+    <p style="margin-top:8px">
+      Built from public listing pages, throttled and cached, honouring robots.txt
+      (search URLs are refused in code, not merely avoided).
+      Review counts proxy popularity — they are not install counts, and Shopify publishes none.
+    </p>
+  </footer>
+</main>
+
+<script>
+const fmt = n => n === null || n === undefined ? "—" : n.toLocaleString();
+const pct = n => n === null || n === undefined ? "—" : (n*100).toFixed(1) + "%";
+
+function table(el, cols, rows){
+  const head = "<thead><tr>" + cols.map(c=>`<th>${c.h}</th>`).join("") + "</tr></thead>";
+  const body = "<tbody>" + rows.map(r =>
+    "<tr>" + cols.map(c=>`<td class="${c.cls||''}">${c.f(r)}</td>`).join("") + "</tr>"
+  ).join("") + "</tbody>";
+  el.innerHTML = head + body;
+}
+
+fetch("data.json").then(r=>r.json()).then(d=>{
+  const cov = d.coverage, vis = d.traction_visible, cat = d.traction_catalogue;
+
+  document.getElementById("tiles").innerHTML = [
+    [fmt(cov.apps), "apps tracked"],
+    [fmt(cov.categories), "categories"],
+    [cov.days, cov.days === 1 ? "day of history" : "days of history"],
+    [fmt(cov.rows), "observations"],
+  ].map(([v,l])=>`<div class="tile"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+
+  table(document.getElementById("traction"),
+    [{h:"population",f:r=>r.pop,cls:"name"},{h:"median reviews",f:r=>fmt(r.med)},
+     {h:"share with almost none",f:r=>r.low},{h:"what it tells you",f:r=>r.what,cls:"name"}],
+    [{pop:"Apps merchants actually see (ranked pages)",med:vis.median_reviews,
+      low:pct(vis.share_under_10)+" under 10",what:"A functioning market with real winners"},
+     {pop:"The full catalogue (random sample of all listings)",med:cat.median_reviews,
+      low:pct(cat.share_zero)+" have zero",what:"A long tail nobody ever discovers"}]);
+
+  document.getElementById("tractionNote").innerHTML =
+    `The median <em>listed</em> app has <strong>${cat.median_reviews}</strong> reviews;
+     the median <em>visible</em> app has <strong>${vis.median_reviews}</strong>.
+     Discovery — not build quality — is what separates them. That gap is the market.`;
+
+  // Movement, only when the archive can honestly support it.
+  const sub = document.getElementById("velocitySub");
+  if (d.has_velocity && d.movers && d.movers.length){
+    sub.textContent = "Reviews gained per day and rank movement — derived from consecutive daily captures.";
+    table(document.getElementById("movers"),
+      [{h:"app",f:r=>r.name,cls:"name"},{h:"reviews",f:r=>fmt(r.reviews)},
+       {h:"reviews/day",f:r=>r.reviews_per_day ?? "—"},
+       {h:"rank move",f:r=>r.rank_change>0?`<span class="pill good">+${r.rank_change}</span>`
+          :r.rank_change<0?`<span class="pill bad">${r.rank_change}</span>`:"—"}],
+      d.movers.slice(0,15));
+  } else {
+    sub.innerHTML = `<span class="pill warn">accrues daily</span> &nbsp;
+      Baseline captured ${cov.first_day}. Velocity and rank movement require two captures
+      separated by a real day — the first reading lands with tomorrow's run.
+      This is the asset being built, and it is why the start date matters more than the code.`;
+    document.getElementById("movers").innerHTML = "";
+  }
+
+  table(document.getElementById("cats"),
+    [{h:"category",f:r=>r.category.replace(/-/g," "),cls:"name"},
+     {h:"apps listed",f:r=>fmt(r.listed_total)},
+     {h:"mean rating",f:r=>r.mean_rating},
+     {h:"rated <4.5",f:r=>pct(r.share_below_4_5)},
+     {h:"median reviews",f:r=>fmt(r.median_reviews)}],
+    d.categories.slice(0,20));
+
+  document.getElementById("meta").textContent =
+    `Generated ${d.generated_at.replace("T"," ").replace("+00:00","")} UTC · ` +
+    `${fmt(cov.rows)} observations across ${cov.days} capture day(s), from ${cov.first_day}.`;
+});
+</script>
+</body>
+</html>
