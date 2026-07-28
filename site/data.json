@@ -1,0 +1,570 @@
+{
+ "generated_at": "2026-07-28T03:48:10+00:00",
+ "coverage": {
+  "days": 1,
+  "first_day": "2026-07-27",
+  "last_day": "2026-07-27",
+  "apps": 4966,
+  "categories": 84,
+  "rows": 6375
+ },
+ "has_velocity": false,
+ "biggest": [
+  {
+   "handle": "judgeme",
+   "name": "Judge.me Product Reviews App",
+   "category": "store-design-site-optimization-seo",
+   "reviews": 42398,
+   "rating": 5.0
+  },
+  {
+   "handle": "tiktok",
+   "name": "TikTok",
+   "category": "marketing-and-conversion-advertising-ads",
+   "reviews": 15188,
+   "rating": 4.8
+  },
+  {
+   "handle": "flow",
+   "name": "Shopify Flow",
+   "category": "store-management-operations-workflow-automation",
+   "reviews": 11375,
+   "rating": 4.7
+  },
+  {
+   "handle": "loox",
+   "name": "Loox \u2011 Product Reviews App",
+   "category": "marketing-and-conversion-social-trust-product-reviews",
+   "reviews": 8785,
+   "rating": 4.9
+  },
+  {
+   "handle": "pop-convert",
+   "name": "Pop Convert \u2011 Pop Ups, Banners",
+   "category": "store-design-notifications-pop-ups",
+   "reviews": 8557,
+   "rating": 4.9
+  },
+  {
+   "handle": "shop",
+   "name": "Shop",
+   "category": "sales-channels-selling-online-marketplaces",
+   "reviews": 8154,
+   "rating": 4.8
+  },
+  {
+   "handle": "subscriptions-by-appstle",
+   "name": "Appstle\u2120 Subscriptions App",
+   "category": "selling-products-payments-subscriptions",
+   "reviews": 7962,
+   "rating": 5.0
+  },
+  {
+   "handle": "ecomsend",
+   "name": "SendWILL Popup Email Marketing",
+   "category": "store-design-notifications-pop-ups",
+   "reviews": 7458,
+   "rating": 4.9
+  },
+  {
+   "handle": "dsers",
+   "name": "DSers: Dropship+AliExpress+AI",
+   "category": "finding-products-sourcing-options-dropshipping",
+   "reviews": 5831,
+   "rating": 5.0
+  },
+  {
+   "handle": "pagefly",
+   "name": "PageFly Landing Page Builder",
+   "category": "store-design-storefronts-page-builder",
+   "reviews": 5654,
+   "rating": 4.9
+  },
+  {
+   "handle": "inbox",
+   "name": "Shopify Inbox",
+   "category": "store-management-support-chat",
+   "reviews": 5462,
+   "rating": 4.6
+  },
+  {
+   "handle": "booster-apps-seo-optimizer",
+   "name": "BOOSTER AI SEO + AEO OPTIMIZER",
+   "category": "store-design-images-and-media-image-editor",
+   "reviews": 5233,
+   "rating": 4.9
+  },
+  {
+   "handle": "google",
+   "name": "Google & YouTube",
+   "category": "marketing-and-conversion-advertising-ads",
+   "reviews": 5026,
+   "rating": 4.5
+  },
+  {
+   "handle": "bundle-deals",
+   "name": "Kaching Bundles App & Upsells",
+   "category": "marketing-and-conversion-upsell-and-bundles-product-bundles",
+   "reviews": 4947,
+   "rating": 5.0
+  },
+  {
+   "handle": "facebook",
+   "name": "Facebook & Instagram",
+   "category": "marketing-and-conversion-advertising-ads",
+   "reviews": 4872,
+   "rating": 3.7
+  },
+  {
+   "handle": "product-options-pro",
+   "name": "Globo Product Options, Variant",
+   "category": "selling-products-custom-products-product-variants",
+   "reviews": 4669,
+   "rating": 4.9
+  },
+  {
+   "handle": "yotpo-social-reviews",
+   "name": "Yotpo: Product Reviews App",
+   "category": "store-design-site-optimization-seo",
+   "reviews": 4391,
+   "rating": 4.8
+  },
+  {
+   "handle": "google-shopping-feed",
+   "name": "Simprosys Google Shopping Feed",
+   "category": "sales-channels-selling-online-marketplaces",
+   "reviews": 4334,
+   "rating": 4.9
+  },
+  {
+   "handle": "avada-seo-suite",
+   "name": "Avada AI SEO Image Optimizer",
+   "category": "store-design-images-and-media-image-editor",
+   "reviews": 4325,
+   "rating": 4.9
+  },
+  {
+   "handle": "printify",
+   "name": "Printify: Print on Demand",
+   "category": "finding-products-sourcing-options-dropshipping",
+   "reviews": 4246,
+   "rating": 4.7
+  }
+ ],
+ "categories": [
+  {
+   "category": "store-management-operations-analytics",
+   "listed_total": 1389,
+   "tracked": 95,
+   "mean_rating": 4.677,
+   "share_below_4_5": 0.147,
+   "median_reviews": 74,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-upsell-and-bundles-upsell-and-cross-sell",
+   "listed_total": 1014,
+   "tracked": 96,
+   "mean_rating": 4.856,
+   "share_below_4_5": 0.031,
+   "median_reviews": 236,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-design-site-optimization-seo",
+   "listed_total": 989,
+   "tracked": 96,
+   "mean_rating": 4.848,
+   "share_below_4_5": 0.042,
+   "median_reviews": 82,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-promotions-discounts",
+   "listed_total": 968,
+   "tracked": 96,
+   "mean_rating": 4.885,
+   "share_below_4_5": 0.021,
+   "median_reviews": 143,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "orders-and-shipping-shipping-solutions-shipping",
+   "listed_total": 930,
+   "tracked": 95,
+   "mean_rating": 4.594,
+   "share_below_4_5": 0.232,
+   "median_reviews": 73,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-management-support-chat",
+   "listed_total": 873,
+   "tracked": 95,
+   "mean_rating": 4.827,
+   "share_below_4_5": 0.063,
+   "median_reviews": 54,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "orders-and-shipping-inventory-inventory-sync",
+   "listed_total": 596,
+   "tracked": 88,
+   "mean_rating": 4.727,
+   "share_below_4_5": 0.148,
+   "median_reviews": 52,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "finding-products-sourcing-options-dropshipping",
+   "listed_total": 562,
+   "tracked": 94,
+   "mean_rating": 4.647,
+   "share_below_4_5": 0.181,
+   "median_reviews": 41,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "orders-and-shipping-shipping-solutions-delivery-and-pickup",
+   "listed_total": 543,
+   "tracked": 95,
+   "mean_rating": 4.618,
+   "share_below_4_5": 0.126,
+   "median_reviews": 49,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "orders-and-shipping-inventory-inventory-optimization",
+   "listed_total": 510,
+   "tracked": 88,
+   "mean_rating": 4.735,
+   "share_below_4_5": 0.17,
+   "median_reviews": 19,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "orders-and-shipping-shipping-solutions-shipping-rates",
+   "listed_total": 500,
+   "tracked": 94,
+   "mean_rating": 4.466,
+   "share_below_4_5": 0.245,
+   "median_reviews": 28,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-management-operations-workflow-automation",
+   "listed_total": 497,
+   "tracked": 88,
+   "mean_rating": 4.674,
+   "share_below_4_5": 0.182,
+   "median_reviews": 18,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-checkout-cart-customization",
+   "listed_total": 495,
+   "tracked": 96,
+   "mean_rating": 4.876,
+   "share_below_4_5": 0.031,
+   "median_reviews": 73,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "selling-products-custom-products-product-variants",
+   "listed_total": 463,
+   "tracked": 95,
+   "mean_rating": 4.856,
+   "share_below_4_5": 0.042,
+   "median_reviews": 89,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-management-operations-bulk-editor",
+   "listed_total": 447,
+   "tracked": 92,
+   "mean_rating": 4.738,
+   "share_below_4_5": 0.12,
+   "median_reviews": 23,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-design-notifications-pop-ups",
+   "listed_total": 438,
+   "tracked": 96,
+   "mean_rating": 4.827,
+   "share_below_4_5": 0.031,
+   "median_reviews": 87,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-design-content-product-content",
+   "listed_total": 431,
+   "tracked": 68,
+   "mean_rating": 4.49,
+   "share_below_4_5": 0.265,
+   "median_reviews": 6,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-design-notifications-banners",
+   "listed_total": 414,
+   "tracked": 92,
+   "mean_rating": 4.726,
+   "share_below_4_5": 0.13,
+   "median_reviews": 25,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-social-trust-product-reviews",
+   "listed_total": 410,
+   "tracked": 95,
+   "mean_rating": 4.777,
+   "share_below_4_5": 0.105,
+   "median_reviews": 94,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "orders-and-shipping-orders-invoices-and-receipts",
+   "listed_total": 409,
+   "tracked": 88,
+   "mean_rating": 4.625,
+   "share_below_4_5": 0.182,
+   "median_reviews": 21,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "sales-channels-selling-online-store-data-importer",
+   "listed_total": 399,
+   "tracked": 89,
+   "mean_rating": 4.645,
+   "share_below_4_5": 0.213,
+   "median_reviews": 11,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-management-security-legal",
+   "listed_total": 395,
+   "tracked": 91,
+   "mean_rating": 4.678,
+   "share_below_4_5": 0.11,
+   "median_reviews": 9,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-marketing-email-marketing",
+   "listed_total": 390,
+   "tracked": 84,
+   "mean_rating": 4.719,
+   "share_below_4_5": 0.143,
+   "median_reviews": 42,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-upsell-and-bundles-product-bundles",
+   "listed_total": 387,
+   "tracked": 96,
+   "mean_rating": 4.858,
+   "share_below_4_5": 0.052,
+   "median_reviews": 136,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-customer-loyalty-loyalty-and-rewards",
+   "listed_total": 386,
+   "tracked": 95,
+   "mean_rating": 4.848,
+   "share_below_4_5": 0.074,
+   "median_reviews": 77,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-design-storefronts-page-builder",
+   "listed_total": 367,
+   "tracked": 91,
+   "mean_rating": 4.713,
+   "share_below_4_5": 0.143,
+   "median_reviews": 19,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "orders-and-shipping-shipping-solutions-third-party-logistics-3pl",
+   "listed_total": 366,
+   "tracked": 55,
+   "mean_rating": 4.245,
+   "share_below_4_5": 0.345,
+   "median_reviews": 4,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-design-design-elements-badges-and-icons",
+   "listed_total": 361,
+   "tracked": 86,
+   "mean_rating": 4.733,
+   "share_below_4_5": 0.093,
+   "median_reviews": 33,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-advertising-ads",
+   "listed_total": 360,
+   "tracked": 92,
+   "mean_rating": 4.647,
+   "share_below_4_5": 0.25,
+   "median_reviews": 48,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-design-images-and-media-image-editor",
+   "listed_total": 347,
+   "tracked": 85,
+   "mean_rating": 4.754,
+   "share_below_4_5": 0.094,
+   "median_reviews": 10,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "finding-products-sourcing-options-print-on-demand-pod",
+   "listed_total": 336,
+   "tracked": 83,
+   "mean_rating": 4.482,
+   "share_below_4_5": 0.253,
+   "median_reviews": 28,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-social-trust-social-proof",
+   "listed_total": 331,
+   "tracked": 96,
+   "mean_rating": 4.879,
+   "share_below_4_5": 0.021,
+   "median_reviews": 91,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-marketing-abandoned-cart",
+   "listed_total": 321,
+   "tracked": 92,
+   "mean_rating": 4.726,
+   "share_below_4_5": 0.141,
+   "median_reviews": 38,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "selling-products-pricing-pricing-optimization",
+   "listed_total": 305,
+   "tracked": 85,
+   "mean_rating": 4.767,
+   "share_below_4_5": 0.129,
+   "median_reviews": 18,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-design-images-and-media-3d-ar-vr",
+   "listed_total": 298,
+   "tracked": 66,
+   "mean_rating": 4.727,
+   "share_below_4_5": 0.106,
+   "median_reviews": 4,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-management-finances-accounting",
+   "listed_total": 288,
+   "tracked": 92,
+   "mean_rating": 4.596,
+   "share_below_4_5": 0.207,
+   "median_reviews": 22,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "sales-channels-selling-online-product-feeds",
+   "listed_total": 276,
+   "tracked": 85,
+   "mean_rating": 4.687,
+   "share_below_4_5": 0.2,
+   "median_reviews": 11,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "orders-and-shipping-orders-order-tracking",
+   "listed_total": 270,
+   "tracked": 84,
+   "mean_rating": 4.565,
+   "share_below_4_5": 0.262,
+   "median_reviews": 10,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "marketing-and-conversion-upsell-and-bundles-stock-alerts",
+   "listed_total": 264,
+   "tracked": 88,
+   "mean_rating": 4.83,
+   "share_below_4_5": 0.057,
+   "median_reviews": 46,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  },
+  {
+   "category": "store-design-images-and-media-video-and-livestream",
+   "listed_total": 259,
+   "tracked": 91,
+   "mean_rating": 4.864,
+   "share_below_4_5": 0.066,
+   "median_reviews": 20,
+   "reviews_gained": 0,
+   "top_app_share_of_growth": null
+  }
+ ],
+ "traction_visible": {
+  "population": "ranked/visible apps (top pages of each category)",
+  "apps": 4966,
+  "median_reviews": 22,
+  "share_under_10": 0.3608,
+  "share_over_100": 0.2596
+ },
+ "traction_catalogue": {
+  "population": "uniform random sample of all listings (n=683)",
+  "median_reviews": 0,
+  "share_zero": 0.613,
+  "share_over_50": 0.056,
+  "note": "the long tail the category pages never show"
+ }
+}
