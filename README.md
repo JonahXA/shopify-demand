@@ -51,6 +51,29 @@ So the binding constraint was never "find the right niche." It is distribution, 
 
 Caveats, stated fairly: reviews are not revenue, and a serious build with a real distribution plan should beat a base rate that includes thousands of abandoned, zero-effort listings. But it beats it *because of the distribution plan* — which is the part the store doesn't give you and the part that is hard to buy.
 
+### Refining the base rate — and correcting two claims above
+
+31.6% of listings never even set a price, which suggests a large mass of abandoned or unfinished apps dragging the headline number down. Restricting to listings that at least finished a paid tier:
+
+| group | n | >10 reviews | >50 | >100 |
+|---|---|---|---|---|
+| all listings | 683 | 13.3% | 5.6% | 3.5% |
+| **has a price** | 467 | **16.1%** | **7.5%** | **4.7%** |
+| no price listed | 216 | 7.4% | 1.4% | 0.9% |
+
+So the realistic prior for a *finished, monetised* app reaching modest traction is ~7.5%, not 5.6%. Better — same order of magnitude.
+
+**Correction 1: solo builders are not structurally disadvantaged.** The opposite, in fact. Developers shipping multiple apps do *worse*:
+
+| | n | >50 reviews |
+|---|---|---|
+| single-app developer | 640 | **5.8%** |
+| multi-app developer | 43 | 2.3% |
+
+Portfolio "app farms" spraying many thin listings underperform. Nothing here says a focused independent can't win.
+
+**Correction 2: "competing with giants" was an overclaim.** It is true in *specific* categories — Shopify Flow owns 69% of workflow-automation — but not generally. The highest-traction apps in a random sample are overwhelmingly small independent shops (Rose Perl Technology, Prezen Apps, Trackify X, Navidium Apps). Microsoft's own channel app manages a 3.2 rating and 323 reviews. Pick the category carefully and the incumbent is usually beatable; the hard part remains being found at all.
+
 ## Honest limitations
 
 - **Review count is a proxy for installs, not a headcount.** Shopify does not publish install numbers. Only a small and non-uniform fraction of merchants review. Treat it as a *ranking* signal.
