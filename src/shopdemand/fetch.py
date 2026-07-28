@@ -41,13 +41,16 @@ def _disallowed(url: str) -> bool:
         or ("shpxid=" in url) or ("auth=" in url)
 
 
-def get(url: str, *, binary: bool = False) -> str:
+def get(url: str, *, refresh: bool = False) -> str:
+    """Fetch a page, cached. `refresh=True` bypasses the cache — required
+    for the daily snapshots, whose entire value is that they capture what
+    the page said *today*."""
     if _disallowed(url):
         raise ValueError(f"robots.txt disallows this URL pattern: {url}")
     CACHE.mkdir(parents=True, exist_ok=True)
     key = hashlib.sha1(url.encode()).hexdigest()
     path = CACHE / f"{key}.html"
-    if path.exists():
+    if path.exists() and not refresh:
         return path.read_text(errors="replace")
 
     global _last

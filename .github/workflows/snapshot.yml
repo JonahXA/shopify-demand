@@ -1,0 +1,48 @@
+# Daily ranking snapshot.
+#
+# This workflow IS the moat. Shopify publishes current rank, rating and
+# review count but no history of any of them, so review velocity, rank
+# movement, new-listing flow and churn exist nowhere else and cannot be
+# reconstructed after the fact. Every day this runs, the dataset becomes
+# one day harder to replicate. Every day it does not run is a hole that
+# can never be filled.
+#
+# Runs on GitHub's free tier: ~6 minutes a day, throttled, cached.
+name: snapshot
+
+on:
+  schedule:
+    - cron: "0 11 * * *"  # 11:00 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false  # never cancel a run mid-capture
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+
+      - name: Capture today's rankings
+        run: python -c "from shopdemand.snapshot import run; run(max_pages=4)"
+
+      - name: Commit the day
+        run: |
+          git config user.name "shopdemand-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/archive data/categories.txt
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "snapshot: $(date -u +%F)"
+          # Retry once: a same-day manual run can race the cron.
+          git pull --rebase --autostash origin main || true
+          git push
