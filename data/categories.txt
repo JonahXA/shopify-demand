@@ -12,6 +12,7 @@ marketing-and-conversion-gifts-gift-cards
 marketing-and-conversion-marketing-abandoned-cart
 marketing-and-conversion-marketing-email-marketing
 marketing-and-conversion-marketing-sms-marketing
+marketing-and-conversion-marketing-web-push
 marketing-and-conversion-promotions-discounts
 marketing-and-conversion-social-trust-product-reviews
 marketing-and-conversion-social-trust-social-proof
@@ -33,6 +34,7 @@ orders-and-shipping-shipping-solutions-shipping
 orders-and-shipping-shipping-solutions-shipping-rates
 orders-and-shipping-shipping-solutions-third-party-logistics-3pl
 sales-channels-selling-in-person-retail
+sales-channels-selling-in-person-sku-and-barcodes
 sales-channels-selling-in-person-store-locator
 sales-channels-selling-online-marketplaces
 sales-channels-selling-online-product-feeds
@@ -48,6 +50,7 @@ selling-products-payments-subscriptions
 selling-products-pricing-pricing-optimization
 selling-products-pricing-pricing-quotes
 store-design-content-blogs
+store-design-content-metafields
 store-design-content-product-content
 store-design-design-elements-animation-and-effects
 store-design-design-elements-badges-and-icons
@@ -57,6 +60,7 @@ store-design-images-and-media-image-gallery
 store-design-images-and-media-video-and-livestream
 store-design-internationalization-cookie-consent
 store-design-internationalization-currency-and-translation
+store-design-internationalization-geolocation
 store-design-notifications-banners
 store-design-notifications-forms
 store-design-notifications-pop-ups
